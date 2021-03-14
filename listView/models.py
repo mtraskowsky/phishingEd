@@ -14,6 +14,7 @@ class Post(models.Model):
     scamType = models.CharField(max_length=255, choices=[('Link','Phishing with a link'), ('Reply', 'Reply to')])
     link = models.CharField(max_length=255, blank = True)
     notes = models.TextField(blank = True)
+    #image = models.ImageField(blank = True)
 
     def __str__(self):
         return self.title

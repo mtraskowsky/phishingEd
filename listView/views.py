@@ -19,3 +19,4 @@ from .models import Post
 class list_View(ListView):
     model = Post
     template_name = 'list.html'
+    ordering = ['-date']
