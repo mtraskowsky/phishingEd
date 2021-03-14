@@ -12,7 +12,7 @@ class Post(models.Model):
     subject = models.CharField(max_length=255, blank = True)
     body = models.TextField(blank = True)
     scamType = models.CharField(max_length=255, choices=[('Link','Phishing with a link'), ('Reply', 'Reply to')])
-    link = models.CharField(max_length=255)
+    link = models.CharField(max_length=255, blank = True)
     notes = models.TextField(blank = True)
 
     def __str__(self):

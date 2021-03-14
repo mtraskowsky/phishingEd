@@ -1,8 +1,15 @@
-<h1>this is the list.html page in templates</h1>
-<h1>Posts</h1>
+{% extends 'base.html' %}
+{% block title %}
+    Blog Posts
+{% endblock %}
+{%  block content %}
 
+<h1>Posts</h1>
+</br>
 {% for post in object_list %}
     <div>
+        </br>
+        </br>
         <p>Date: {{ post.date }}</p>
         <p>Scam Type: {{ post.scamType }}</p>
         <p>{{ post.description }}</p>
@@ -11,6 +18,11 @@
         <p>To: {{ post.receiver }}</p>
         <p>Subject: {{ post.subject }}</p>
         <p>{{ post.body }}</p>
+        </br>
+        </br>
+
     </div>
 
 {% endfor %}
+
+{%  endblock %}
