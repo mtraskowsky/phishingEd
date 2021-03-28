@@ -12,19 +12,17 @@
     <h1>Posts</h1>
     </br>
     {% for post in object_list %}
-        <div class="border border-primary">
+        <div class="email-ind-list">
             </br>
             </br>
-            <p class="mt-2">Date: {{ post.date }}</p>
-            <hr class="mt-0 mb-4">
+            <p>Date: {{ post.date }}</p>
             <p>Scam Type: {{ post.scamType }}</p>
-            <hr class="mt-0 mb-4">
             <p>{{ post.description }}</p>
             <p>{{ post.title }}</p>
             </br>
-            <p>From: {{ post.sender }}</p>
-            <p>To: {{ post.receiver }}</p>
-            <p>Subject: {{ post.subject }}</p>
+            <p class="email-info">From: {{ post.sender }}</p>
+            <p class="email-info">To: {{ post.receiver }}</p>
+            <p class="email-info">Subject: {{ post.subject }}</p>
             <p>{{ post.body }}</p>
             </br>
             </br>
