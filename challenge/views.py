@@ -6,3 +6,6 @@ def challenge_View(request, *args, **kwargs):
     print(args, kwargs)
     print(request.user)
     return render(request, "challenge.html", {})
+
+def styles(request):
+    return render(request, 'challenge.html', {})

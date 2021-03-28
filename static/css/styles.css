@@ -1,0 +1,42 @@
+h1 {
+    color: black;
+}
+
+h2 {
+    color: black;
+}
+
+row {
+    padding: 0 1.5em 0 1.5em;
+}
+
+body {
+  color: black;
+}
+
+.h1 {
+    color: red !important;
+    background: red !important;
+}
+
+.col-sm {
+    border: green;
+}
+
+.email-ind {
+    background: lightgray;
+    padding: 0 1.5em 0 1.5em;
+}
+
+
+.container-emails {
+
+}
+
+.email-info {
+    border-bottom: 1px solid black;
+    padding: .5em 0 .5em 0;
+}
+
+
+

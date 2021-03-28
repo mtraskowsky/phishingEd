@@ -3,7 +3,10 @@
     Challenge Page
 {% endblock %}
 {%  block content %}
-<div class="container">
+{% load static %}
+<!-- CSS CUSTOM -->
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<div class="container-top">
     <div class="row">
         <h2>Which of these emails is more likely to be legitimate?</h2>
         <div class="col-sm">
@@ -11,46 +14,68 @@
        </div>
     </div>
 </div>
-<div class="container">
+<div class="container-emails">
   <div class="row">
     <div class="col-sm" style="font-size:14px">
-        </br>
-        <p>From: Angelica Sepulveda  &lt;angelspvd1070@GMAIL.COM&gt;</p>
-        <p>To: Maria Traskowsky &lt;mariatraskowsky@ksu.edu&gt;</p>
-        <p>Subject: Charity Project</p>
-        <p>Hello Dear,</p>
-        <p>Greetings,</p>
-        <p>Peace be unto you, I belief that you can help in setting up a charity foundation for the benefit of mankind, I wish to establish a charity foundation to help the poor, widows ,orphans and less privileged people in your country under your care, Can you help to build this project in your country? I’m willing to donate the sum of (four million, five hundred thousand US dollars) $4.500.000.00.All I want from you is sincerity to handle this project. to give them hope and support and to make them  feel the same like others. Together We can make the world a better place when we help one another. I’ll be waiting to read from you today and know your opinion in doing this project.</p>
-        </br>
+        <div class="email-ind">
+            <span class="border border-primary"></span>
+            </br>
+            <p class="email-info">From: Angelica Sepulveda  &lt;angelspvd1070@GMAIL.COM&gt;</p>
+            <p class="email-info">To: Maria Traskowsky &lt;mariatraskowsky@ksu.edu&gt;</p>
+            <p class="email-info">Subject: Charity Project</p>
+            <p>Hello Dear,</p>
+            <p>Greetings,</p>
+            <p>Peace be unto you, I belief that you can help in setting up a charity foundation for the benefit of mankind, I wish to establish a charity foundation to help the poor, widows ,orphans and less privileged people in your country under your care, Can you help to build this project in your country? I’m willing to donate the sum of (four million, five hundred thousand US dollars) $4.500.000.00.All I want from you is sincerity to handle this project. to give them hope and support and to make them  feel the same like others. Together We can make the world a better place when we help one another. I’ll be waiting to read from you today and know your opinion in doing this project.</p>
+            </br>
+        </div>
         <div class="d-grid gap-2">
           <button class="btn btn-primary" type="button">This one is legit!</button>
         </div>
     </div>
     <div class="col-sm" style="font-size:14px">
-        </br>
-        <p>From: contact@findxapp.com</p>
-        <p>To: Maria Traskowsky &lt;mariatraskowsky@ksu.edu&gt;</p>
-        <p>Subject: Hello Maria</p>
-        <p>Hey dear.</p>
-        <p>Proven solution Unbelievable!</p>
-        <p>Just look at it! https://bit.ly/39XMHLW [https://bit.ly/39XMHLW]</p>
-        <p>Jaime Menon</p>
-        </br>
+        <div class="email-ind">
+            </br>
+            <p class="email-info">From: contact@findxapp.com</p>
+            <p class="email-info">To: Maria Traskowsky &lt;mariatraskowsky@ksu.edu&gt;</p>
+            <p class="email-info">Subject: Hello Maria</p>
+            <p>Hey dear.</p>
+            <p>Proven solution Unbelievable!</p>
+            <p>Just look at it! https://bit.ly/39XMHLW [https://bit.ly/39XMHLW]</p>
+            <p>Jaime Menon</p>
+            </br>
+        </div>
         <div class="d-grid gap-2">
-          <button class="btn btn-primary" type="button">This one is legit!</button>
+            </br>
+            <button class="btn btn-primary" type="button">This one is legit!</button>
         </div>
     </div>
     <div class="col-sm" style="font-size:14px">
-        </br>
-        <p>From: Seth Gallitzer &lt;sgsax@KSU.EDU&gt;</p>
-        <p>To: CS-EVERYBODY@LISTSERV.KSU.EDU</p>
-        <p>Subject: campus power outage this morning</p>
-        <p>We got an announcement at around 9:20 that Evergy will be shutting down power to campus at 9:30 for approximately two hours (probably already by the time you receive this). I have shut down all research computing in preparation for this. All core departmental systems will still be powered by the building generator and should stay online. However, network access to the building may be lost as the UPS batteries in networking closets run out. If you are connected to any departmental systems, you should close your files and log out as soon as possible so no data is lost.As soon as I hear that power has been restored, I will send another announcement.Stay warm!Seth-- Seth GalitzerIT AdministratorComputer Science DepartmentCarl R. Ice College of Engineering Kansas State University sgsax@ksu.edu785-532-7790
-        </br>
+        <div class="email-ind">
+            </br>
+            <p class="email-info">From: Seth Gallitzer &lt;sgsax@KSU.EDU&gt;</p>
+            <p class="email-info">To: CS-EVERYBODY@LISTSERV.KSU.EDU</p>
+            <p class="email-info">Subject: campus power outage this morning</p>
+            <p>We got an announcement at around 9:20 that Evergy will be shutting down power to campus
+                at 9:30 for approximately two hours (probably already by the time you receive this).
+                I have shut down all research computing in preparation for this. All core departmental
+                systems will still be powered by the building generator and should stay online. However,
+                network access to the building may be lost as the UPS batteries in networking closets run out.
+                If you are connected to any departmental systems, you should close your files and log out
+                as soon as possible so no data is lost.As soon as I hear that power has been restored,
+                I will send another announcement.Stay warm!Seth-- </p>
+                <p>Seth Galitzer</p>
+                <p>IT Administrator</p>
+                <p>Computer Science Department</p>
+                <p> Carl R. Ice College of Engineering</p>
+                <p>Kansas State University</p>
+                <p>sgsax@ksu.edu   785-532-7790</p>
+            </br>
+        </div>
         <div class="d-grid gap-2">
           <button class="btn btn-primary" type="button">This one is legit!</button>
         </div>
     </div>
   </div>
 </div>
+</br>
 {%  endblock %}
