@@ -6,92 +6,141 @@
 {% load static %}
 <!-- CSS CUSTOM -->
 <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-<div class="container-top">
-    <div class="row">
-        <h2>Which of these emails is more likely to be legitimate?</h2>
-        <div class="col-sm">
-        <button type="button" class="btn btn-primary btn-lg float-end"">HINTS</button>
-       </div>
-    </div>
-</div>
-<div class="container-emails">
-  <div class="row">
-    <div class="col-sm" style="font-size:14px">
-        <div class="email-verytop">
-            <span class="dot-red"></span>
-            <span class="dot-yellow"></span>
-            <span class="dot-green"></span>
-        </div>
-        <div class="email-ind">
-            </br>
-            <p class="email-info">From: Angelica Sepulveda  &lt;angelspvd1070@GMAIL.COM&gt;</p>
-            <p class="email-info">To: Maria Traskowsky &lt;mariatraskowsky@ksu.edu&gt;</p>
-            <p class="email-info">Subject: Charity Project</p>
-            <p>Hello Dear,</p>
-            <p>Greetings,</p>
-            <p>Peace be unto you, I belief that you can help in setting up a charity foundation for the benefit of mankind, I wish to establish a charity foundation to help the poor, widows ,orphans and less privileged people in your country under your care, Can you help to build this project in your country? I’m willing to donate the sum of (four million, five hundred thousand US dollars) $4.500.000.00.All I want from you is sincerity to handle this project. to give them hope and support and to make them  feel the same like others. Together We can make the world a better place when we help one another. I’ll be waiting to read from you today and know your opinion in doing this project.</p>
-            </br>
-        </div>
-        <div class="d-grid gap-2">
-            </br>
-            <button class="btn btn-primary" type="button">This one is legit!</button>
+<body>
+    <div class="container-top">
+        <div class="row">
+            <h2>Which of these emails is more likely to be legitimate?</h2>
+            <div class="col-sm">
+            <button type="button" id="MybtnModal" class="btn btn-primary btn-lg float-end"">HINTS</button>
+           </div>
         </div>
     </div>
-    <div class="col-sm" style="font-size:14px">
-        <div class="email-verytop">
-            <span class="dot-red"></span>
-            <span class="dot-yellow"></span>
-            <span class="dot-green"></span>
+    <div class="container-emails">
+      <div class="row">
+        <div class="col-sm" style="font-size:14px">
+            <div class="unselectable">
+                <div class="email-verytop">
+                    <span class="dot-red"></span>
+                    <span class="dot-yellow"></span>
+                    <span class="dot-green"></span>
+                </div>
+                <div class="email-ind">
+                    </br>
+                    <p class="email-info">From: Angelica Sepulveda  &lt;angelspvd1070@GMAIL.COM&gt;</p>
+                    <p class="email-info">To: Maria Traskowsky &lt;mariatraskowsky@ksu.edu&gt;</p>
+                    <p class="email-info">Subject: Charity Project</p>
+                    <p>Hello Dear,</p>
+                    <p>Greetings,</p>
+                    <p>Peace be unto you, I belief that you can help in setting up a charity foundation for the benefit of mankind, I wish to establish a charity foundation to help the poor, widows ,orphans and less privileged people in your country under your care, Can you help to build this project in your country? I’m willing to donate the sum of (four million, five hundred thousand US dollars) $4.500.000.00.All I want from you is sincerity to handle this project. to give them hope and support and to make them  feel the same like others. Together We can make the world a better place when we help one another. I’ll be waiting to read from you today and know your opinion in doing this project.</p>
+                    </br>
+                </div>
+            </div>
+            <div class="d-grid gap-2">
+                </br>
+                <button class="btn btn-primary" type="button">This one is legit!</button>
+            </div>
         </div>
-        <div class="email-ind">
-            </br>
-            <p class="email-info">From: contact@findxapp.com</p>
-            <p class="email-info">To: Maria Traskowsky &lt;mariatraskowsky@ksu.edu&gt;</p>
-            <p class="email-info">Subject: Hello Maria</p>
-            <p>Hey dear.</p>
-            <p>Proven solution Unbelievable!</p>
-            <p>Just look at it! https://bit.ly/39XMHLW [https://bit.ly/39XMHLW]</p>
-            <p>Jaime Menon</p>
-            </br>
+        <div class="col-sm" style="font-size:14px">
+            <div class="email-verytop">
+                <span class="dot-red"></span>
+                <span class="dot-yellow"></span>
+                <span class="dot-green"></span>
+            </div>
+            <div class="email-ind">
+                </br>
+                <p class="email-info">From: contact@findxapp.com</p>
+                <p class="email-info">To: Maria Traskowsky &lt;mariatraskowsky@ksu.edu&gt;</p>
+                <p class="email-info">Subject: Hello Maria</p>
+                <p>Hey dear.</p>
+                <p>Proven solution Unbelievable!</p>
+                <p>Just look at it! https://bit.ly/39XMHLW [https://bit.ly/39XMHLW]</p>
+                <p>Jaime Menon</p>
+                </br>
+            </div>
+            <div class="d-grid gap-2">
+                </br>
+                <button class="btn btn-primary" type="button">This one is legit!</button>
+            </div>
         </div>
-        <div class="d-grid gap-2">
-            </br>
-            <button class="btn btn-primary" type="button">This one is legit!</button>
+        <div class="col-sm" style="font-size:14px">
+            <div class="unselectable">
+                <div class="email-verytop">
+                    <span class="dot-red"></span>
+                    <span class="dot-yellow"></span>
+                    <span class="dot-green"></span>
+                </div>
+                <div class="email-ind" data-content='second'>
+                    </br>
+                    <p class="email-info">From: Seth Gallitzer &lt;sgsax@KSU.EDU&gt;</p>
+                    <p class="email-info">To: CS-EVERYBODY@LISTSERV.KSU.EDU</p>
+                    <p class="email-info">Subject: campus power outage this morning</p>
+                    <p>We got an announcement at around 9:20 that Evergy will be shutting down power to campus
+                        at 9:30 for approximately two hours (probably already by the time you receive this).
+                        I have shut down all research computing in preparation for this. All core departmental
+                        systems will still be powered by the building generator and should stay online. However,
+                        network access to the building may be lost as the UPS batteries in networking closets run out.
+                        If you are connected to any departmental systems, you should close your files and log out
+                        as soon as possible so no data is lost.As soon as I hear that power has been restored,
+                        I will send another announcement.Stay warm!Seth-- </p>
+                        <p>Seth Galitzer</p>
+                        <p>IT Administrator</p>
+                        <p>Computer Science Department</p>
+                        <p> Carl R. Ice College of Engineering</p>
+                        <p>Kansas State University</p>
+                        <p>sgsax@ksu.edu   785-532-7790</p>
+                    </br>
+                </div>
+            </div>
+            <div class="d-grid gap-2">
+                </br>
+                <button class="btn btn-primary" type="button">This one is legit!</button>
+            </div>
         </div>
+      </div>
     </div>
-    <div class="col-sm" style="font-size:14px">
-        <div class="email-verytop">
-            <span class="dot-red"></span>
-            <span class="dot-yellow"></span>
-            <span class="dot-green"></span>
+    </br>
+
+   <!-- Hints Modal -->
+    <div class="modal" id="secondModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Stuck?</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Click on the "Hints" button in the top right corner to see helpful tips.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+          </div>
         </div>
-        <div class="email-ind">
-            </br>
-            <p class="email-info">From: Seth Gallitzer &lt;sgsax@KSU.EDU&gt;</p>
-            <p class="email-info">To: CS-EVERYBODY@LISTSERV.KSU.EDU</p>
-            <p class="email-info">Subject: campus power outage this morning</p>
-            <p>We got an announcement at around 9:20 that Evergy will be shutting down power to campus
-                at 9:30 for approximately two hours (probably already by the time you receive this).
-                I have shut down all research computing in preparation for this. All core departmental
-                systems will still be powered by the building generator and should stay online. However,
-                network access to the building may be lost as the UPS batteries in networking closets run out.
-                If you are connected to any departmental systems, you should close your files and log out
-                as soon as possible so no data is lost.As soon as I hear that power has been restored,
-                I will send another announcement.Stay warm!Seth-- </p>
-                <p>Seth Galitzer</p>
-                <p>IT Administrator</p>
-                <p>Computer Science Department</p>
-                <p> Carl R. Ice College of Engineering</p>
-                <p>Kansas State University</p>
-                <p>sgsax@ksu.edu   785-532-7790</p>
-            </br>
-        </div>
-        <div class="d-grid gap-2">
-            </br>
-            <button class="btn btn-primary" type="button">This one is legit!</button>
-        </div>
+      </div>
     </div>
-  </div>
-</div>
-</br>
+    <!-- end of hints modal -->
+
+<!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        <!-- Show hint button on click -->
+
+        $(document).ready(function(){
+            $('#MybtnModal').click(function(){
+                $('#secondModal').modal('show')
+            });
+        });
+
+        <!-- Show hint button after period of time -->
+        $(document).ready(function () {
+                setTimeout(function () {
+                    $("#secondModal").modal('show');
+            }, 3000)
+        });
+    </script>
+
+</body>
 {%  endblock %}
