@@ -1,9 +1,9 @@
-h1 {
-    color: black;
+h3 {
+    color: green;
 }
 
 h2 {
-    color: black;
+    color: green;
 }
 
 row {
@@ -96,4 +96,33 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+<!-- POPVER -->
+.popover {
+  text-align: right;
+}
+.popover-header {
+    color: blue;
+    font-size: 15px;
+}
+.popover-content {
+    color: red;
+    font-size: 10px;
+}
+
+
+#first-hint {
+   background-color: yellow !important;
+}
+
+.thisispopover {
+  border: 2px dotted red !important;
+
+}
+
+#thisispopover {
+  border: 2px dotted red !important;
+   background-color: yellow !important;
+
 }

@@ -26,6 +26,9 @@
                 </div>
                 <div class="email-ind">
                     </br>
+                    <p id="first-hint" data-toggle="popover" title="Hint 1" data-bs-trigger="hover" data-bs-content="Is Angelica Sepulveda someone you know?<br/>
+                    If you look at the email address, does angelspvd1070@gmail.com seem legitimate?" data-bs-html="true">POPOVER TEST</p>
+
                     <p class="email-info">From: Angelica Sepulveda  &lt;angelspvd1070@GMAIL.COM&gt;</p>
                     <p class="email-info">To: Maria Traskowsky &lt;mariatraskowsky@ksu.edu&gt;</p>
                     <p class="email-info">Subject: Charity Project</p>
@@ -128,20 +131,24 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <script type="text/javascript">
-        <!-- Show hint button on click -->
-
+    <!-- Show hint button on click -->
         $(document).ready(function(){
             $('#MybtnModal').click(function(){
                 $('#secondModal').modal('show')
             });
         });
 
-        <!-- Show hint button after period of time -->
+    <!-- Show hint button after period of time -->
         $(document).ready(function () {
                 setTimeout(function () {
                     $("#secondModal").modal('show');
             }, 3000)
         });
+
+        $(document).ready(function(){
+          $('[data-toggle="popover"]').popover();
+        });
+
     </script>
 
 </body>
