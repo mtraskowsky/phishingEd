@@ -1,5 +1,9 @@
+.thing {
+    background: black;
+}
+
 h2 {
-    color: black;
+    color: white;
 }
 
 row {
@@ -8,6 +12,18 @@ row {
 
 .container-top {
     padding: 0 1.5em 0 1.5em;
+}
+
+
+.dot-hint {
+    margin: 0 .2em 0 .2em;
+    width: 15px;
+    height: 15px;
+    padding: 3px 0px;
+    border-radius: 15px;
+    font-size: 8px;
+    text-align: center;
+    background-color: #29a329;
 }
 
 body {
@@ -24,7 +40,7 @@ body {
 }
 
 .email-ind {
-    background: lightgray;
+    background:  #e6e6e6;
     padding: .5em 1.5em .5em 1.5em;
     border: 1px solid #595959;
     border-bottom-left-radius: 5px;
@@ -85,6 +101,7 @@ body {
     margin-bottom: 3.5em;
 }
 
+ /* Makes content of emails unselectable so no one copy/pastes */
 .unselectable {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -111,6 +128,14 @@ body {
     font-size: 10px;
 }
 
-#first-hint {
-    border: 2px solid red;
+#hint1{
+
+}
+
+#highlight-hint {
+    background: #9DC88D;
+}
+
+#highlight-hint2 {
+    border: 3px solid  #b30000;
 }

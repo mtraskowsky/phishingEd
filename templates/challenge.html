@@ -6,13 +6,22 @@
 {% load static %}
 <!-- CSS CUSTOM -->
 <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-<body>
+<body class="thing">
     <div class="container-top">
         <div class="row">
             <h2>Which of these emails is more likely to be legitimate?</h2>
             <div class="col-sm">
-            <button type="button" id="MybtnModal" class="btn btn-success btn-lg float-end"">HINTS</button>
-           </div>
+                <button type="button" id="MybtnModal" class="btn btn-success btn-lg float-end"">HINTS</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm hint-dots">
+                <button type="button" id="hint5-dot" class="btn dot-hint btn-success btn-lg float-end"></button>
+                <button type="button" id="hint4-dot" class="btn dot-hint btn-success btn-lg float-end"></button>
+                <button type="button" id="hint3-dot" class="btn dot-hint btn-success btn-lg float-end"></button>
+                <button type="button" id="hint2-dot" class="btn dot-hint btn-success btn-lg float-end"></button>
+                <button type="button" id="hint1-dot" class="btn dot-hint btn-success btn-lg float-end"></button>
+            </div>
         </div>
     </div>
     <div class="container-emails">
@@ -27,18 +36,17 @@
                 <div class="email-ind">
                     </br>
                     <!-- HINT 1-->
-                    <div class="email-info" id="first-hint" data-toggle="popover" title="Hint 1" data-bs-trigger="hover" data-bs-html="true"
+                    <div data-toggle="popover1" title="Hint 1" data-bs-trigger="click" data-bs-html="true"
                         data-bs-content="<b>Examine sender</b></br>
                         </br>Is Angelica Sepulveda someone you know?<br/>
                         If you look at the email address, does <b>angelspvd1070@gmail.com</b> seem legitimate?">
-                        From: Angelica Sepulveda  &lt;angelspvd1070@GMAIL.COM&gt;
+                        <p class="email-info" id="hint1">From: Angelica Sepulveda  &lt;angelspvd1070@GMAIL.COM&gt;</p>
                     </div>
                     <!-- end of HINT 1 -->
-                    <p class="email-info">From: Angelica Sepulveda  &lt;angelspvd1070@GMAIL.COM&gt;</p>
                     <p class="email-info">To: Maria Traskowsky &lt;mariatraskowsky@ksu.edu&gt;</p>
                     <p class="email-info">Subject: Charity Project</p>
                     <!-- HINT 2 -->
-                    <div class="email-info" id="first-hint" data-toggle="popover" title="Hint 2" data-bs-trigger="hover" data-placement="right" data-bs-html="true"
+                    <div id="hint2" data-toggle="popover2" title="Hint 2" data-bs-trigger="hover" data-placement="right" data-bs-html="true"
                          data-bs-content="<b>Consider greeting</b></br></br>
                          Does this seem like the right way for someone you don’t know to address you? <br/>
                          If the greeting seems abnormal, be cautious.">
@@ -68,7 +76,7 @@
                     <p class="email-info">To: Maria Traskowsky &lt;mariatraskowsky@ksu.edu&gt;</p>
                     <p class="email-info">Subject: Hello Maria</p>
                     <!-- HINT 5-->
-                    <div class="email-info" id="first-hint" data-toggle="popover" title="Hint 5" data-bs-trigger="hover" data-bs-html="true"
+                    <div id="hint5" data-toggle="popover5" title="Hint 5" data-bs-trigger="hover" data-bs-html="true"
                         data-bs-content="<b>Consider greeting</b></br></br>
                         Does this seem like the right way for someone you don’t know to address you? <br/>
                         If the greeting seems abnormal, be cautious.">
@@ -77,13 +85,14 @@
                     <!-- end of HINT 5 -->
                     <p>Proven solution Unbelievable!</p>
                     <!-- HINT 3-->
-                    <div class="email-info" id="first-hint" data-toggle="popover" title="Hint 3" data-bs-trigger="hover" data-bs-html="true"
+                    <div id="hint3" data-toggle="popover3" title="Hint 3" data-bs-trigger="hover" data-bs-html="true"
                         data-bs-content="<b>Examine links</b></br></br>
                         Does this look like a real link to a website? Does anything in the email tell you where the link takes you?
                         Pay close attention to URLs before clicking anything in an email.">
                         Just look at it! https://bit.ly/39XMHLW [https://bit.ly/39XMHLW]
                     </div>
                     <!-- end of HINT 3 -->
+                    </br>
                     <p>Jaime Menon</p>
                     </br>
                 </div>
@@ -117,7 +126,7 @@
                         <p>Stay warm!<p/>
                         <p>Seth</p>
                         <!-- HINT 4-->
-                        <div class="email-info" id="first-hint" data-toggle="popover" title="Hint 4" data-bs-trigger="hover" data-bs-html="true"
+                        <div class="email-info" id="hint4" data-toggle="popover4" title="Hint 4" data-bs-trigger="hover" data-bs-html="true"
                             data-bs-content="<b>Look at the signature</b></br></br>
                             Is the email from someone you know? If not, can you research them or the company?">
                             <p>Seth Galitzer<br/>
@@ -168,11 +177,11 @@
 
     <script type="text/javascript">
     <!-- Show hint button on click -->
-        $(document).ready(function(){
-            $('#MybtnModal').click(function(){
-                $('#secondModal').modal('show')
-            });
-        });
+ //       $(document).ready(function(){
+ //           $('#MybtnModal').click(function(){
+ //               $('#secondModal').modal('show')
+ //           });
+//        });
 
     <!-- Show hint button after period of time -->
         $(document).ready(function () {
@@ -183,6 +192,45 @@
 
         $(document).ready(function(){
           $('[data-toggle="popover"]').popover();
+        });
+
+        $(document).ready(function(){
+            $('#MybtnModal').click(function(){
+                $('[data-toggle="popover1"]').popover('toggle');
+            });
+        });
+
+        $(document).ready(function(){
+            $('#hint1-dot').click(function(){
+                $('[data-toggle="popover1"]').popover('toggle');
+                document.getElementById('hint1').id = 'highlight-hint';
+            });
+        });
+
+        $(document).ready(function(){
+            $('#hint2-dot').click(function(){
+                $('[data-toggle="popover2"]').popover('toggle');
+                document.getElementById('hint2').id = 'highlight-hint';
+            });
+        });
+
+        $(document).ready(function(){
+            $('#hint3-dot').click(function(){
+                $('[data-toggle="popover3"]').popover('toggle');
+                document.getElementById('hint3').id = 'highlight-hint2';
+            });
+        });
+
+        $(document).ready(function(){
+            $('#hint4-dot').click(function(){
+                $('[data-toggle="popover4"]').popover('toggle');
+            });
+        });
+
+        $(document).ready(function(){
+            $('#hint5-dot').click(function(){
+                $('[data-toggle="popover5"]').popover('toggle');
+            });
         });
 
     </script>
