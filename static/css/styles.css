@@ -59,6 +59,8 @@ body {
 .email-info {
     border-bottom: 1px solid black;
     padding: .5em 0 .5em 0;
+    border-right: 2px solid #e6e6e6;
+    border-left: 2px solid #e6e6e6;
 }
 
 .dot-red {
@@ -80,6 +82,14 @@ body {
 .dot-green {
   height: 15px;
   width: 15px;
+  background-color: #29a329;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-hint {
+  height: 25px;
+  width: 25px;
   background-color: #29a329;
   border-radius: 50%;
   display: inline-block;
@@ -114,11 +124,11 @@ body {
  /* Popover */
  .popover {
   text-align: center;
-  border: 3px solid #00802b; /* Close to color of hints button. */
+  border: 3px solid  #66cc99; /* Close to color of hints button. */
   border-radius: 4%;
 }
 .popover-header {
-    background: #00802b;  /* Close to color of hints button. */
+    background:  #66cc99;  /* Close to color of hints button. */
     color: white;
     font-size: 15px;
 }
@@ -128,14 +138,21 @@ body {
     font-size: 10px;
 }
 
-#hint1{
-
-}
 
 #highlight-hint {
-    background: #9DC88D;
+    border: .25em solid #66cc99;
+    border-radius: 50%
 }
 
 #highlight-hint2 {
     border: 3px solid  #b30000;
 }
+
+#highlight-hint3 {
+  border-radius: 25px;
+  border: .25em solid yellow;
+  border-radius: 30%
+
+}
+
+

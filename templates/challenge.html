@@ -9,18 +9,13 @@
 <body class="thing">
     <div class="container-top">
         <div class="row">
-            <h2>Which of these emails is more likely to be legitimate?</h2>
+            <h2>Which one of these emails is the most likely to be legitimate?</h2>
             <div class="col-sm">
-                <button type="button" id="MybtnModal" class="btn btn-success btn-lg float-end"">HINTS</button>
+                <button type="button" id="hintButton" class="btn btn-success btn-lg float-end"">HINTS</button>
             </div>
         </div>
         <div class="row">
             <div class="col-sm hint-dots">
-                <button type="button" id="hint5-dot" class="btn dot-hint btn-success btn-lg float-end"></button>
-                <button type="button" id="hint4-dot" class="btn dot-hint btn-success btn-lg float-end"></button>
-                <button type="button" id="hint3-dot" class="btn dot-hint btn-success btn-lg float-end"></button>
-                <button type="button" id="hint2-dot" class="btn dot-hint btn-success btn-lg float-end"></button>
-                <button type="button" id="hint1-dot" class="btn dot-hint btn-success btn-lg float-end"></button>
             </div>
         </div>
     </div>
@@ -36,22 +31,25 @@
                 <div class="email-ind">
                     </br>
                     <!-- HINT 1-->
-                    <div data-toggle="popover1" title="Hint 1" data-bs-trigger="click" data-bs-html="true"
+                    <div data-toggle="popover1" data-bs-trigger="hover" data-bs-html="true"
                         data-bs-content="<b>Examine sender</b></br>
                         </br>Is Angelica Sepulveda someone you know?<br/>
                         If you look at the email address, does <b>angelspvd1070@gmail.com</b> seem legitimate?">
-                        <p class="email-info" id="hint1">From: Angelica Sepulveda  &lt;angelspvd1070@GMAIL.COM&gt;</p>
+                        <p class="email-info" id="hint1">From: Angelica Sepulveda  &lt;angelspvd1070@GMAIL.COM&gt;
+                        <button type="button" id="hint1-dot" class="btn dot-hint btn-success btn-lg float-end"></button></p>
                     </div>
                     <!-- end of HINT 1 -->
                     <p class="email-info">To: Maria Traskowsky &lt;mariatraskowsky@ksu.edu&gt;</p>
                     <p class="email-info">Subject: Charity Project</p>
                     <!-- HINT 2 -->
-                    <div id="hint2" data-toggle="popover2" title="Hint 2" data-bs-trigger="hover" data-placement="right" data-bs-html="true"
+                    <div id="hint2" data-toggle="popover2" data-bs-trigger="hover" data-placement="right" data-bs-html="true"
                          data-bs-content="<b>Consider greeting</b></br></br>
                          Does this seem like the right way for someone you don’t know to address you? <br/>
                          If the greeting seems abnormal, be cautious.">
-                        <p>Hello Dear,</p>
-                        <p>Greetings,</p>
+                        <p>Hello Dear,</br>
+                        Greetings,
+                            <button type="button" id="hint2-dot" class="btn dot-hint btn-success btn-lg float-end"></button>
+                        </p>
                     </div>
                     <!-- end of HINT 2 -->
                     <p>Peace be unto you, I belief that you can help in setting up a charity foundation for the benefit of mankind, I wish to establish a charity foundation to help the poor, widows ,orphans and less privileged people in your country under your care, Can you help to build this project in your country? I’m willing to donate the sum of (four million, five hundred thousand US dollars) $4.500.000.00.All I want from you is sincerity to handle this project. to give them hope and support and to make them  feel the same like others. Together We can make the world a better place when we help one another. I’ll be waiting to read from you today and know your opinion in doing this project.</p>
@@ -76,20 +74,25 @@
                     <p class="email-info">To: Maria Traskowsky &lt;mariatraskowsky@ksu.edu&gt;</p>
                     <p class="email-info">Subject: Hello Maria</p>
                     <!-- HINT 5-->
-                    <div id="hint5" data-toggle="popover5" title="Hint 5" data-bs-trigger="hover" data-bs-html="true"
+                    <div id="hint5" data-toggle="popover5" data-bs-trigger="hover" data-bs-html="true"
                         data-bs-content="<b>Consider greeting</b></br></br>
                         Does this seem like the right way for someone you don’t know to address you? <br/>
                         If the greeting seems abnormal, be cautious.">
-                        <p>Hey dear.</p>
+                        <p>Hey dear.
+                            <button type="button" id="hint5-dot" class="btn dot-hint btn-success btn-lg float-end"></button>
+                        </p>
                     </div>
                     <!-- end of HINT 5 -->
                     <p>Proven solution Unbelievable!</p>
                     <!-- HINT 3-->
-                    <div id="hint3" data-toggle="popover3" title="Hint 3" data-bs-trigger="hover" data-bs-html="true"
+                    <div id="hint3" data-toggle="popover3" data-bs-trigger="hover" data-bs-html="true"
                         data-bs-content="<b>Examine links</b></br></br>
                         Does this look like a real link to a website? Does anything in the email tell you where the link takes you?
                         Pay close attention to URLs before clicking anything in an email.">
-                        Just look at it! https://bit.ly/39XMHLW [https://bit.ly/39XMHLW]
+                        <p>
+                            Just look at it! https://bit.ly/39XMHLW [https://bit.ly/39XMHLW]
+                            <button type="button" id="hint3-dot" class="btn dot-hint btn-success btn-lg float-end"></button>
+                        </p>
                     </div>
                     <!-- end of HINT 3 -->
                     </br>
@@ -126,12 +129,13 @@
                         <p>Stay warm!<p/>
                         <p>Seth</p>
                         <!-- HINT 4-->
-                        <div class="email-info" id="hint4" data-toggle="popover4" title="Hint 4" data-bs-trigger="hover" data-bs-html="true"
+                        <div class="email-info" id="hint4" data-toggle="popover4" data-bs-trigger="hover" data-bs-html="true"
                             data-bs-content="<b>Look at the signature</b></br></br>
                             Is the email from someone you know? If not, can you research them or the company?">
                             <p>Seth Galitzer<br/>
                             IT Administrator<br/>
                             Computer Science Department<br/>
+                                <button type="button" id="hint4-dot" class="btn dot-hint btn-success btn-lg float-end"></button>
                             Carl R. Ice College of Engineering<br/>
                             Kansas State University<br/>
                             sgsax@ksu.edu<br/>
@@ -178,7 +182,7 @@
     <script type="text/javascript">
     <!-- Show hint button on click -->
  //       $(document).ready(function(){
- //           $('#MybtnModal').click(function(){
+ //           $('#hintButton').click(function(){
  //               $('#secondModal').modal('show')
  //           });
 //        });
@@ -192,14 +196,30 @@
 
         $(document).ready(function(){
           $('[data-toggle="popover"]').popover();
+          $("#hint1-dot").hide();
+          $("#hint2-dot").hide();
+          $("#hint3-dot").hide();
+          $("#hint4-dot").hide();
+          $("#hint5-dot").hide();
         });
+
+//        $(document).ready(function(){
+//            $('#hintButton').click(function(){
+//                $('[data-toggle="popover1"]').popover('toggle');
+//            });
+//        });
 
         $(document).ready(function(){
-            $('#MybtnModal').click(function(){
-                $('[data-toggle="popover1"]').popover('toggle');
-            });
+          $("#hintButton").click(function(){
+            $("#hint1-dot").toggle();
+            $("#hint2-dot").toggle();
+            $("#hint3-dot").toggle();
+            $("#hint4-dot").toggle();
+            $("#hint5-dot").toggle();
+          });
         });
 
+// INDIVIDUAL HINT FUNCTIONALITY
         $(document).ready(function(){
             $('#hint1-dot').click(function(){
                 $('[data-toggle="popover1"]').popover('toggle');
@@ -217,19 +237,21 @@
         $(document).ready(function(){
             $('#hint3-dot').click(function(){
                 $('[data-toggle="popover3"]').popover('toggle');
-                document.getElementById('hint3').id = 'highlight-hint2';
+                document.getElementById('hint3').id = 'highlight-hint';
             });
         });
 
         $(document).ready(function(){
             $('#hint4-dot').click(function(){
                 $('[data-toggle="popover4"]').popover('toggle');
+                document.getElementById('hint4').id = 'highlight-hint';
             });
         });
 
         $(document).ready(function(){
             $('#hint5-dot').click(function(){
                 $('[data-toggle="popover5"]').popover('toggle');
+                document.getElementById('hint5').id = 'highlight-hint';
             });
         });
 
