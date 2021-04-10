@@ -21,14 +21,14 @@
     </div>
     <div class="container-emails">
       <div class="row">
-        <div class="col-sm" style="font-size:14px">
+        <div class="col-sm email-box-1" style="font-size:14px">
             <div class="unselectable">
-                <div class="email-verytop">
+                <div class="email-verytop" id="email-top-1">
                     <span class="dot-red"></span>
                     <span class="dot-yellow"></span>
                     <span class="dot-green"></span>
                 </div>
-                <div class="email-ind">
+                <div class="email-ind" id="email-box-1">
                     </br>
                     <!-- HINT 1-->
                     <div data-toggle="popover1" data-bs-trigger="hover" data-bs-html="true"
@@ -63,12 +63,12 @@
         </div>
         <div class="col-sm" style="font-size:14px">
             <div class="unselectable">
-                <div class="email-verytop">
+                <div class="email-verytop" id="email-top-2">
                     <span class="dot-red"></span>
                     <span class="dot-yellow"></span>
                     <span class="dot-green"></span>
                 </div>
-                <div class="email-ind">
+                <div class="email-ind" id="email-box-2">
                     </br>
                     <p class="email-info">From: contact@findxapp.com</p>
                     <p class="email-info">To: Maria Traskowsky &lt;mariatraskowsky@ksu.edu&gt;</p>
@@ -107,12 +107,12 @@
         </div>
         <div class="col-sm" style="font-size:14px">
             <div class="unselectable">
-                <div class="email-verytop">
+                <div class="email-verytop" id="email-top-3">
                     <span class="dot-red"></span>
                     <span class="dot-yellow"></span>
                     <span class="dot-green"></span>
                 </div>
-                <div class="email-ind" data-content='second'>
+                <div class="email-ind" id="email-box-3" data-content='second'>
                     </br>
                     <p class="email-info">From: Seth Gallitzer &lt;sgsax@KSU.EDU&gt;</p>
                     <p class="email-info">To: CS-EVERYBODY@LISTSERV.KSU.EDU</p>
@@ -203,12 +203,7 @@
           $("#hint5-dot").hide();
         });
 
-//        $(document).ready(function(){
-//            $('#hintButton').click(function(){
-//                $('[data-toggle="popover1"]').popover('toggle');
-//            });
-//        });
-
+// Toggle all hint circle buttons with large hint button
         $(document).ready(function(){
           $("#hintButton").click(function(){
             $("#hint1-dot").toggle();
@@ -220,38 +215,147 @@
         });
 
 // INDIVIDUAL HINT FUNCTIONALITY
+//        $(document).ready(function(){
+ //           $('#hint1-dot').click(function(){
+  //              $('[data-toggle="popover1"]').popover('toggle');
+   //             document.getElementById('hint1').id = 'highlight-hint';
+    //        });
+     //   });
+
+// hint 1 button
         $(document).ready(function(){
             $('#hint1-dot').click(function(){
                 $('[data-toggle="popover1"]').popover('toggle');
-                document.getElementById('hint1').id = 'highlight-hint';
+
+                // toggles border around hint text
+                var element = document.getElementById("hint1");
+                element.classList.toggle("highlight-hint-class");
+
+
+                // fades out email 2 when hint in email 1 is clicked
+                var top2 = document.getElementById("email-top-2");
+                top2.classList.toggle("email-ind-dimmed");
+
+                var box2 = document.getElementById("email-box-2");
+                box2.classList.toggle("email-ind-dimmed");
+
+
+                // fades out email 3 when hint in email 1 is clicked
+                var top3 = document.getElementById("email-top-3");
+                top3.classList.toggle("email-ind-dimmed");
+
+                var box3 = document.getElementById("email-box-3");
+                box3.classList.toggle("email-ind-dimmed");
+
             });
         });
 
+// hint 2 button
         $(document).ready(function(){
             $('#hint2-dot').click(function(){
                 $('[data-toggle="popover2"]').popover('toggle');
-                document.getElementById('hint2').id = 'highlight-hint';
+
+                // toggles border around hint text
+                var element = document.getElementById("hint2");
+                element.classList.toggle("highlight-hint-class");
+
+
+                // fades out email 2 when hint in email 1 is clicked
+                var top2 = document.getElementById("email-top-2");
+                top2.classList.toggle("email-ind-dimmed");
+
+                var box2 = document.getElementById("email-box-2");
+                box2.classList.toggle("email-ind-dimmed");
+
+
+                // fades out email 3 when hint in email 1 is clicked
+                var top3 = document.getElementById("email-top-3");
+                top3.classList.toggle("email-ind-dimmed");
+
+                var box3 = document.getElementById("email-box-3");
+                box3.classList.toggle("email-ind-dimmed");
+
             });
         });
 
         $(document).ready(function(){
             $('#hint3-dot').click(function(){
                 $('[data-toggle="popover3"]').popover('toggle');
-                document.getElementById('hint3').id = 'highlight-hint';
+
+                // toggles border around hint text
+                var element = document.getElementById("hint3");
+                element.classList.toggle("highlight-hint-class");
+
+
+                // fades out email 1 when hint in email 1 is clicked
+                var top1 = document.getElementById("email-top-1");
+                top1.classList.toggle("email-ind-dimmed");
+
+                var box1 = document.getElementById("email-box-1");
+                box1.classList.toggle("email-ind-dimmed");
+
+
+                // fades out email 3 when hint in email 1 is clicked
+                var top3 = document.getElementById("email-top-3");
+                top3.classList.toggle("email-ind-dimmed");
+
+                var box3 = document.getElementById("email-box-3");
+                box3.classList.toggle("email-ind-dimmed");
+
             });
         });
 
         $(document).ready(function(){
             $('#hint4-dot').click(function(){
                 $('[data-toggle="popover4"]').popover('toggle');
-                document.getElementById('hint4').id = 'highlight-hint';
+
+                // toggles border around hint text
+                var element = document.getElementById("hint4");
+                element.classList.toggle("highlight-hint-class");
+
+
+                // fades out email 1 when hint in email 1 is clicked
+                var top1 = document.getElementById("email-top-1");
+                top1.classList.toggle("email-ind-dimmed");
+
+                var box1 = document.getElementById("email-box-1");
+                box1.classList.toggle("email-ind-dimmed");
+
+
+                // fades out email 2 when hint in email 1 is clicked
+                var top2 = document.getElementById("email-top-2");
+                top2.classList.toggle("email-ind-dimmed");
+
+                var box2 = document.getElementById("email-box-2");
+                box2.classList.toggle("email-ind-dimmed");
+
             });
         });
 
         $(document).ready(function(){
             $('#hint5-dot').click(function(){
                 $('[data-toggle="popover5"]').popover('toggle');
-                document.getElementById('hint5').id = 'highlight-hint';
+
+                // toggles border around hint text
+                var element = document.getElementById("hint5");
+                element.classList.toggle("highlight-hint-class");
+
+
+                // fades out email 1 when hint in email 1 is clicked
+                var top1 = document.getElementById("email-top-1");
+                top1.classList.toggle("email-ind-dimmed");
+
+                var box1 = document.getElementById("email-box-1");
+                box1.classList.toggle("email-ind-dimmed");
+
+
+                // fades out email 3 when hint in email 1 is clicked
+                var top3 = document.getElementById("email-top-3");
+                top3.classList.toggle("email-ind-dimmed");
+
+                var box3 = document.getElementById("email-box-3");
+                box3.classList.toggle("email-ind-dimmed");
+
             });
         });
 

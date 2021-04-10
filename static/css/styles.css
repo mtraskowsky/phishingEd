@@ -47,9 +47,13 @@ body {
     border-bottom-right-radius: 5px;
 }
 
-
-.container-emails {
-
+.email-ind-dimmed {
+    opacity: 0.33;
+    background:  #e6e6e6;
+    padding: .5em 1.5em .5em 1.5em;
+    border: 1px solid #595959;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .col-sm {
@@ -64,35 +68,35 @@ body {
 }
 
 .dot-red {
-  height: 15px;
-  width: 15px;
-  background-color: #e60000;
-  border-radius: 50%;
-  display: inline-block;
+    height: 15px;
+    width: 15px;
+    background-color: #e60000;
+    border-radius: 50%;
+    display: inline-block;
 }
 
 .dot-yellow {
-  height: 15px;
-  width: 15px;
-  background-color: #ffe066;
-  border-radius: 50%;
-  display: inline-block;
+    height: 15px;
+    width: 15px;
+    background-color: #ffe066;
+    border-radius: 50%;
+    display: inline-block;
 }
 
 .dot-green {
-  height: 15px;
-  width: 15px;
-  background-color: #29a329;
-  border-radius: 50%;
-  display: inline-block;
+    height: 15px;
+    width: 15px;
+    background-color: #29a329;
+    border-radius: 50%;
+    display: inline-block;
 }
 
 .dot-hint {
-  height: 25px;
-  width: 25px;
-  background-color: #29a329;
-  border-radius: 50%;
-  display: inline-block;
+    height: 25px;
+    width: 25px;
+    background-color: #29a329;
+    border-radius: 50%;
+    display: inline-block;
 }
 
 .email-verytop {
@@ -153,6 +157,11 @@ body {
   border: .25em solid yellow;
   border-radius: 30%
 
+}
+
+.highlight-hint-class {
+    border: .25em solid #66cc99;
+    border-radius: 50%
 }
 
 
