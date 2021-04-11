@@ -1,9 +1,9 @@
 .thing {
-    background: white;
+    background: black;
 }
 
 h2 {
-    color: black;
+    color: white;
 }
 
 row {
@@ -70,7 +70,7 @@ body {
 .dot-red {
     height: 15px;
     width: 15px;
-    background-color: #0040ff;
+    background-color: #e60000;
     border-radius: 50%;
     display: inline-block;
     border: 1px solid white;
@@ -79,7 +79,7 @@ body {
 .dot-yellow {
     height: 15px;
     width: 15px;
-    background-color: #4d79ff;
+    background-color: #ffe066;
     border-radius: 50%;
     display: inline-block;
     border: 1px solid white;
@@ -88,7 +88,7 @@ body {
 .dot-green {
     height: 15px;
     width: 15px;
-    background-color: #99b3ff;
+    background-color: #29a329;
     border-radius: 50%;
     display: inline-block;
     border: 1px solid white;
@@ -97,7 +97,7 @@ body {
 .dot-hint {
     height: 25px;
     width: 25px;
-    background-color: #29a329;
+    background-color: #4d94ff;
     border-radius: 50%;
     display: inline-block;
     border: 1px solid #595959;
@@ -131,12 +131,12 @@ body {
 
  /* Popover */
  .popover {
-  text-align: center;
-  border: 3px solid  #66cc99;
+    text-align: center;
+    border: 3px solid  #4d94ff;
 }
 
 .popover-header {
-    background:  #66cc99;  /* Close to color of hints button. */
+    background:  #e60000;  /* Close to color of hints button. */
     color: white;
     font-size: 15px;
 }
@@ -148,7 +148,7 @@ body {
 
 
 #highlight-hint {
-    border: .25em solid #66cc99;
+    border: .25em solid #e60000;
     border-radius: 50%
 }
 
@@ -164,8 +164,8 @@ body {
 }
 
 .highlight-hint-class {
-    border: .25em solid #66cc99;
-    border-radius: 50%
+    border: .25em solid #4d94ff;
+    border-radius: 32% 68% 88% 12% / 20% 39% 61% 80%;
 }
 
 
