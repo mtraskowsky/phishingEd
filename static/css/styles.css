@@ -70,26 +70,29 @@ body {
 .dot-red {
     height: 15px;
     width: 15px;
-    background-color: #e60000;
+    background-color: #0040ff;
     border-radius: 50%;
     display: inline-block;
-}
+    border: 1px solid white;
+} /* old red color:background-color: #e60000;*/
 
 .dot-yellow {
     height: 15px;
     width: 15px;
-    background-color: #ffe066;
+    background-color: #4d79ff;
     border-radius: 50%;
     display: inline-block;
-}
+    border: 1px solid white;
+} /* old yellow: background-color: #ffe066;*/
 
 .dot-green {
     height: 15px;
     width: 15px;
-    background-color: #29a329;
+    background-color: #99b3ff;
     border-radius: 50%;
     display: inline-block;
-}
+    border: 1px solid white;
+} /* old green: background-color: #29a329 */
 
 .dot-hint {
     height: 25px;
@@ -97,6 +100,7 @@ body {
     background-color: #29a329;
     border-radius: 50%;
     display: inline-block;
+    border: 1px solid #595959;
 }
 
 .email-verytop {
@@ -104,7 +108,7 @@ body {
     padding: .5em .1em .1em .5em;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-}
+} /*    background: #595959; */
 
 
 .email-ind-list {
@@ -128,9 +132,9 @@ body {
  /* Popover */
  .popover {
   text-align: center;
-  border: 3px solid  #66cc99; /* Close to color of hints button. */
-  border-radius: 4%;
+  border: 3px solid  #66cc99;
 }
+
 .popover-header {
     background:  #66cc99;  /* Close to color of hints button. */
     color: white;

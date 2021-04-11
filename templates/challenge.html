@@ -11,7 +11,11 @@
         <div class="row">
             <h2>Which one of these emails is the most likely to be legitimate?</h2>
             <div class="col-sm">
-                <button type="button" id="hintButton" class="btn btn-success btn-lg float-end"">HINTS</button>
+                <div class="float-end" id="hintBtnPopover" data-toggle="hintBtnPopover" data-bs-trigger="hover" data-bs-html="true"
+                    data-bs-content="<b>Click this HINTS button to see hints for each email!<br/>
+                    Click on the dots to learn more about elements of the emails to take note of.">
+                    <button type="button" id="hintButton" class="btn btn-success btn-lg float-end"">HINTS</button>
+                </div>
             </div>
         </div>
         <div class="row">
@@ -166,7 +170,7 @@
             <p>Click on the "Hints" button in the top right corner to see helpful tips.</p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+            <button id="modalCloseBtn" type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
@@ -180,19 +184,42 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <script type="text/javascript">
-    <!-- Show hint button on click -->
- //       $(document).ready(function(){
- //           $('#hintButton').click(function(){
- //               $('#secondModal').modal('show')
- //           });
-//        });
-
-    <!-- Show hint button after period of time -->
+// Show hint modal after period of time
         $(document).ready(function () {
                 setTimeout(function () {
                     $("#secondModal").modal('show');
             }, 3000)
         });
+
+
+// show popover for hint button when user closes hint modal
+        $(document).ready(function(){
+          $("#modalCloseBtn").click(function(){
+            $('[data-toggle="hintBtnPopover"]').popover('toggle');
+
+            // fades out email 1
+            var top1 = document.getElementById("email-top-1");
+            top1.classList.toggle("email-ind-dimmed");
+
+            var box1 = document.getElementById("email-box-1");
+            box1.classList.toggle("email-ind-dimmed");
+
+            // fades out email 2
+            var top2 = document.getElementById("email-top-2");
+            top2.classList.toggle("email-ind-dimmed");
+
+            var box2 = document.getElementById("email-box-2");
+            box2.classList.toggle("email-ind-dimmed");
+
+            // fades out email 3
+            var top3 = document.getElementById("email-top-3");
+            top3.classList.toggle("email-ind-dimmed");
+
+            var box3 = document.getElementById("email-box-3");
+            box3.classList.toggle("email-ind-dimmed");
+          });
+        });
+
 
         $(document).ready(function(){
           $('[data-toggle="popover"]').popover();
@@ -211,6 +238,27 @@
             $("#hint3-dot").toggle();
             $("#hint4-dot").toggle();
             $("#hint5-dot").toggle();
+
+            // fades out email 1
+            var top1 = document.getElementById("email-top-1");
+            top1.classList.remove("email-ind-dimmed")
+
+            var box1 = document.getElementById("email-box-1");
+            box1.classList.remove("email-ind-dimmed");
+
+            // fades out email 2
+            var top2 = document.getElementById("email-top-2");
+            top2.classList.remove("email-ind-dimmed");
+
+            var box2 = document.getElementById("email-box-2");
+            box2.classList.remove("email-ind-dimmed");
+
+            // fades out email 3
+            var top3 = document.getElementById("email-top-3");
+            top3.classList.remove("email-ind-dimmed");
+
+            var box3 = document.getElementById("email-box-3");
+            box3.classList.remove("email-ind-dimmed");
           });
         });
 
