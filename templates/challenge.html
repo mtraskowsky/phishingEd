@@ -10,6 +10,7 @@
     <div class="container-top">
         <div class="row">
             <h2>Which one of these emails is the most likely to be legitimate?</h2>
+            <!--
             <div class="col-sm">
                 <div class="float-end" id="hintBtnPopover" data-toggle="hintBtnPopover" data-bs-trigger="hover" data-bs-html="true"
                     data-bs-content="<b>Click this HINTS button to see hints for each email!<br/>
@@ -17,11 +18,14 @@
                     <button type="button" id="hintButton" class="btn btn-success btn-lg float-end"">HINTS</button>
                 </div>
             </div>
+            -->
         </div>
+        <!--
         <div class="row">
             <div class="col-sm hint-dots">
             </div>
         </div>
+        -->
     </div>
     <div class="container-emails">
       <div class="row">
@@ -36,23 +40,23 @@
                     </br>
                     <!-- HINT 1-->
                     <div data-toggle="popover1" data-bs-trigger="hover" data-bs-html="true"
-                        data-bs-content="<b>Examine sender</b></br>
-                        </br>Is Angelica Sepulveda someone you know?<br/>
-                        If you look at the email address, does <b>angelspvd1070@gmail.com</b> seem legitimate?">
+                        data-bs-content="<b>Examine sender:</b>
+                        Is Angelica Sepulveda someone you know?<br/>
+                        If you look at the email address, does <b>angelspvd1070@gmail.com</b> seem familiar?">
                         <p class="email-info" id="hint1">From: Angelica Sepulveda  &lt;angelspvd1070@GMAIL.COM&gt;
-                        <button type="button" id="hint1-dot" class="btn dot-hint btn-success btn-lg float-end"></button></p>
+                        <button type="button" id="hint1-dot" class="btn dot-hint btn-success btn-lg float-end"><b>!</b></button></p>
                     </div>
                     <!-- end of HINT 1 -->
                     <p class="email-info">To: Maria Traskowsky &lt;mariatraskowsky@ksu.edu&gt;</p>
                     <p class="email-info">Subject: Charity Project</p>
                     <!-- HINT 2 -->
                     <div id="hint2" data-toggle="popover2" data-bs-trigger="hover" data-placement="right" data-bs-html="true"
-                         data-bs-content="<b>Consider greeting</b></br></br>
+                         data-bs-content="<b>Consider greeting: </b>
                          Does this seem like the right way for someone you don’t know to address you? <br/>
-                         If the greeting seems abnormal, be cautious.">
+                         If the greeting seems odd, be cautious.">
                         <p>Hello Dear,</br>
                         Greetings,
-                            <button type="button" id="hint2-dot" class="btn dot-hint btn-success btn-lg float-end"></button>
+                            <button type="button" id="hint2-dot" class="btn dot-hint btn-success btn-lg float-end"><b>!</b></button>
                         </p>
                     </div>
                     <!-- end of HINT 2 -->
@@ -79,23 +83,23 @@
                     <p class="email-info">Subject: Hello Maria</p>
                     <!-- HINT 5-->
                     <div id="hint5" data-toggle="popover5" data-bs-trigger="hover" data-bs-html="true"
-                        data-bs-content="<b>Consider greeting</b></br></br>
+                        data-bs-content="<b>Consider greeting: </b>
                         Does this seem like the right way for someone you don’t know to address you? <br/>
-                        If the greeting seems abnormal, be cautious.">
+                        If the greeting seems odd, be cautious.">
                         <p>Hey dear.
-                            <button type="button" id="hint5-dot" class="btn dot-hint btn-success btn-lg float-end"></button>
+                            <button type="button" id="hint5-dot" class="btn dot-hint btn-success btn-lg float-end"><b>!</b></button>
                         </p>
                     </div>
                     <!-- end of HINT 5 -->
                     <p>Proven solution Unbelievable!</p>
                     <!-- HINT 3-->
                     <div id="hint3" data-toggle="popover3" data-bs-trigger="hover" data-bs-html="true"
-                        data-bs-content="<b>Examine links</b></br></br>
+                        data-bs-content="<b>Examine links: </b>
                         Does this look like a real link to a website? Does anything in the email tell you where the link takes you?
                         Pay close attention to URLs before clicking anything in an email.">
                         <p>
                             Just look at it! https://bit.ly/39XMHLW [https://bit.ly/39XMHLW]
-                            <button type="button" id="hint3-dot" class="btn dot-hint btn-success btn-lg float-end"></button>
+                            <button type="button" id="hint3-dot" class="btn dot-hint btn-success btn-lg float-end"><b>!</b></button>
                         </p>
                     </div>
                     <!-- end of HINT 3 -->
@@ -134,12 +138,12 @@
                         <p>Seth</p>
                         <!-- HINT 4-->
                         <div class="email-info" id="hint4" data-toggle="popover4" data-bs-trigger="hover" data-bs-html="true"
-                            data-bs-content="<b>Look at the signature</b></br></br>
+                            data-bs-content="<b>Look at the signature: </b>
                             Is the email from someone you know? If not, can you research them or the company?">
                             <p>Seth Galitzer<br/>
                             IT Administrator<br/>
                             Computer Science Department<br/>
-                                <button type="button" id="hint4-dot" class="btn dot-hint btn-success btn-lg float-end"></button>
+                                <button type="button" id="hint4-dot" class="btn dot-hint btn-success btn-lg float-end"><b>!</b></button>
                             Carl R. Ice College of Engineering<br/>
                             Kansas State University<br/>
                             sgsax@ksu.edu<br/>
@@ -164,13 +168,22 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">Stuck?</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p>Click on the "Hints" button in the top right corner to see helpful tips.</p>
-          </div>
-          <div class="modal-footer">
-            <button id="modalCloseBtn" type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+              <p>Click on the green dots to learn more about elements of the emails to take note of
+              </p>
+              <div class="row">
+                <div class="col-sm">
+                    <div id="hintBtnPopover" data-toggle="hintBtnPopover" data-bs-trigger="hover" data-bs-html="true"
+                        data-bs-content="Click on the green dots to see hints, and learn more about what to look for!">
+                        <button type="button" id="hint1-dot" class="btn dot-hint-large btn-success btn-lg float-end"><b>!</b></button>
+                    </div>
+                </div>
+                <div class="col-sm"></div>
+              </div>
+            <div class="modal-footer">
+                <button id="modalCloseBtn" type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+            </div>
           </div>
         </div>
       </div>
@@ -188,11 +201,13 @@
         $(document).ready(function () {
                 setTimeout(function () {
                     $("#secondModal").modal('show');
-            }, 3000)
+                    $('[data-toggle="hintBtnPopover"]').popover('toggle');
+            }, 1000)
         });
 
 
 // show popover for hint button when user closes hint modal
+/*
         $(document).ready(function(){
           $("#modalCloseBtn").click(function(){
             $('[data-toggle="hintBtnPopover"]').popover('toggle');
@@ -219,15 +234,15 @@
             box3.classList.toggle("email-ind-dimmed");
           });
         });
-
+*/
 
         $(document).ready(function(){
           $('[data-toggle="popover"]').popover();
-          $("#hint1-dot").hide();
-          $("#hint2-dot").hide();
-          $("#hint3-dot").hide();
-          $("#hint4-dot").hide();
-          $("#hint5-dot").hide();
+          //$("#hint1-dot").hide();
+          //$("#hint2-dot").hide();
+          //$("#hint3-dot").hide();
+          //$("#hint4-dot").hide();
+          //$("#hint5-dot").hide();
         });
 
 // Toggle all hint circle buttons with large hint button
