@@ -69,33 +69,33 @@ body {
 
 .dot-red {
     opacity: 0.6;
-    height: 15px;
-    width: 15px;
+    height: 12px;
+    width: 12px;
     background-color: #e60000;
     border-radius: 50%;
     display: inline-block;
     border: 1px solid white;
-} /* old red color:background-color: #e60000;*/
+}
 
 .dot-yellow {
     opacity: 0.6;
-    height: 15px;
-    width: 15px;
+    height: 12px;
+    width: 12px;
     background-color: #ffe066;
     border-radius: 50%;
     display: inline-block;
     border: 1px solid white;
-} /* old yellow: background-color: #ffe066;*/
+}
 
 .dot-green {
     opacity: 0.6;
-    height: 15px;
-    width: 15px;
+    height: 12px;
+    width: 12px;
     background-color: #29a329;
     border-radius: 50%;
     display: inline-block;
     border: 1px solid white;
-} /* old green: background-color: #29a329 */
+}
 
 .dot-hint {
     height: 25px;
@@ -170,5 +170,6 @@ body {
 }
 
 #hintBtnPopover {
+    text-align: center;
 }
 
