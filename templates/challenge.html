@@ -162,7 +162,7 @@
     </div>
     </br>
 
-   <!-- Hints Modal -->
+   <!-- First Modal to show hint button -->
     <div class="modal" id="secondModal" tabindex="-1">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -174,14 +174,13 @@
               </p>
               <div class="row">
                 <div class="col-sm">
-                    <div id="hintBtnPopover" data-toggle="hintBtnPopover" data-bs-trigger="click" data-bs-html="true"
-                        data-bs-content="Click on the green dots to see hints, and learn more about what to look for!">
-                        <button type="button" id="hint1-dot" class="btn dot-hint-large btn-success btn-lg float-end"><b>!</b></button>
-                    </div>
+                    <button href="#" role="button" class="btn dot-hint-large btn-success btn-lg float-end" data-toggle="hintBtnPopover"
+                            data-bs-content="Each dot will display a different hint.">!
+                    </button>
                 </div>
                 <div class="col-sm"></div>
               </div>
-            <div class="modal-footer">
+              <div class="modal-footer">
                 <button id="modalCloseBtn" type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
             </div>
           </div>
@@ -189,6 +188,45 @@
       </div>
     </div>
     <!-- end of hints modal -->
+
+    <!-- Wrong choice modal-->
+    <div class="modal" id="wrongChoiceModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Hmm...</h5>
+          </div>
+          <div class="modal-body">
+            <p>Not quite.. try again! Feel free to look at the hints as often as you need to.</p>
+          </div>
+          <div class="modal-footer">
+              <button id="wrongChoiceModalCloseBtn" type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of wrong choice modal-->
+
+    <!-- Correct choice modal-->
+    <div class="modal" id="correctChoiceModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header" id="correctChoiceModalHeader">
+            <h5 class="modal-title">Congratulations!</h5>
+          </div>
+          <div class="modal-body" id="correctChoiceModal">
+            <p>You have identified the email that is most likely to be legitimate.</p> </br>
+            <p>Round 2 is unlocked. Click next to move on!</p>
+          </div>
+          <div class="modal-footer">
+            <div class="d-grid gap-2 mx-auto">
+                <button class="btn btn-success btn-lg" type="button" data-bs-dismiss="modal">Next Round</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of correct choice modal-->
 
 <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
@@ -367,6 +405,22 @@
                 var box3 = document.getElementById("email-box-3");
                 box3.classList.toggle("email-ind-dimmed");
 
+            });
+        });
+
+
+// wrong choice - tells user to try again
+        $(document).ready(function(){
+            $('#legitButton-1').click(function(){
+                $("#wrongChoiceModal").modal('show');
+            });
+
+            $('#legitButton-2').click(function(){
+                $("#wrongChoiceModal").modal('show');
+            });
+
+            $('#legitButton-3').click(function(){
+                $("#correctChoiceModal").modal('show');
             });
         });
 
