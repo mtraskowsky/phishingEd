@@ -248,22 +248,9 @@
         });
 
 
-// show popover for hint button when user closes hint modal
-/*
-        $(document).ready(function(){
-          $("#modalCloseBtn").click(function(){
-            //$('[data-toggle="hintBtnPopover"]').popover('toggle');
-          });
-        });
-*/
-
         $(document).ready(function(){
           $('[data-toggle="popover"]').popover();
-          //$("#hint1-dot").hide();
-          //$("#hint2-dot").hide();
-          //$("#hint3-dot").hide();
-          //$("#hint4-dot").hide();
-          //$("#hint5-dot").hide();
+
         });
 
 
@@ -277,7 +264,7 @@
 
 // hint 1 button
         $(document).ready(function(){
-            $('#hint1-dot').click(function(){
+            $('#hint1-dot').hover(function(){
                 $('[data-toggle="popover1"]').popover('toggle');
 
                 // toggles border around hint text
@@ -305,7 +292,7 @@
 
 // hint 2 button
         $(document).ready(function(){
-            $('#hint2-dot').click(function(){
+            $('#hint2-dot').hover(function(){
                 $('[data-toggle="popover2"]').popover('toggle');
 
                 // toggles border around hint text
@@ -332,7 +319,7 @@
         });
 
         $(document).ready(function(){
-            $('#hint3-dot').click(function(){
+            $('#hint3-dot').hover(function(){
                 $('[data-toggle="popover3"]').popover('toggle');
 
                 // toggles border around hint text
@@ -359,7 +346,7 @@
         });
 
         $(document).ready(function(){
-            $('#hint4-dot').click(function(){
+            $('#hint4-dot').hover(function(){
                 $('[data-toggle="popover4"]').popover('toggle');
 
                 // toggles border around hint text
@@ -386,7 +373,7 @@
         });
 
         $(document).ready(function(){
-            $('#hint5-dot').click(function(){
+            $('#hint5-dot').hover(function(){
                 $('[data-toggle="popover5"]').popover('toggle');
 
                 // toggles border around hint text
