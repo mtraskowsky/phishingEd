@@ -39,6 +39,24 @@ body {
     border: green;
 }
 
+modal-header {
+    margin: 0 auto;
+    text-align: center;
+}
+
+modal-title {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#stuckModal {
+    margin: 0 auto;
+}
+
+.modal-body {
+    text-align: center;
+}
+
 .email-ind {
     background:  #e6e6e6;
     padding: .5em 1.5em .5em 1.5em;
@@ -171,6 +189,7 @@ body {
 
 #hintBtnPopover {
     text-align: center;
+    margin: 0 auto;
 }
 
 #correctChoiceModal {
@@ -180,3 +199,4 @@ body {
 #correctChoiceModalHeader {
     text-align: center;
 }
+

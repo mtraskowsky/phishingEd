@@ -10,22 +10,7 @@
     <div class="container-top">
         <div class="row">
             <h2>Which one of these emails is the most likely to be legitimate?</h2>
-            <!--
-            <div class="col-sm">
-                <div class="float-end" id="hintBtnPopover" data-toggle="hintBtnPopover" data-bs-trigger="hover" data-bs-html="true"
-                    data-bs-content="<b>Click this HINTS button to see hints for each email!<br/>
-                    Click on the dots to learn more about elements of the emails to take note of.">
-                    <button type="button" id="hintButton" class="btn btn-success btn-lg float-end"">HINTS</button>
-                </div>
-            </div>
-            -->
         </div>
-        <!--
-        <div class="row">
-            <div class="col-sm hint-dots">
-            </div>
-        </div>
-        -->
         </br>
         </br>
     </div>
@@ -42,7 +27,7 @@
                     </br>
                     <!-- HINT 1-->
                     <div data-toggle="popover1" data-bs-trigger="hover" data-bs-html="true"
-                        data-bs-content="<b>Examine sender:</b>
+                        data-bs-content="<b>Examine the sender:</b>
                         Is Angelica Sepulveda someone you know?<br/>
                         If you look at the email address, does <b>angelspvd1070@gmail.com</b> seem familiar?">
                         <p class="email-info" id="hint1">From: Angelica Sepulveda  &lt;angelspvd1070@GMAIL.COM&gt;
@@ -53,7 +38,7 @@
                     <p class="email-info">Subject: Charity Project</p>
                     <!-- HINT 2 -->
                     <div id="hint2" data-toggle="popover2" data-bs-trigger="hover" data-placement="right" data-bs-html="true"
-                         data-bs-content="<b>Consider greeting: </b>
+                         data-bs-content="<b>Consider the greeting: </b>
                          Does this seem like the right way for someone you don’t know to address you? <br/>
                          If the greeting seems odd, be careful.">
                         <p>Hello Dear,</br>
@@ -85,7 +70,7 @@
                     <p class="email-info">Subject: Hello Maria</p>
                     <!-- HINT 5-->
                     <div id="hint5" data-toggle="popover5" data-bs-trigger="hover" data-bs-html="true"
-                        data-bs-content="<b>Consider greeting: </b>
+                        data-bs-content="<b>Consider the greeting: </b>
                         Does this seem like the right way for someone you don’t know to address you? <br/>
                         If the greeting seems odd, be careful.">
                         <p>Hey dear.
@@ -96,7 +81,7 @@
                     <p>Proven solution Unbelievable!</p>
                     <!-- HINT 3-->
                     <div id="hint3" data-toggle="popover3" data-bs-trigger="hover" data-bs-html="true"
-                        data-bs-content="<b>Examine links: </b>
+                        data-bs-content="<b>Examine the links: </b>
                         Does this look like a real link to a website? Does anything in the email tell you where the link takes you?
                         Pay close attention to URLs before clicking anything in an email.">
                         <p>
@@ -169,21 +154,21 @@
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Stuck?</h5>
+            <h4 id="stuckModal" class="modal-title">Stuck?</h4>
           </div>
           <div class="modal-body">
-              <p>Click on the green dots to learn more about elements of the emails to take note of!
+              </br>
+              <p>Hover over the green dots to learn more about elements of the emails to take note of!
               </p>
+              </br>
               <div class="row">
-                <div class="col-sm">
-                    </br>
-                    <button href="#" role="button" class="btn dot-hint-large btn-success btn-lg float-end" data-toggle="hintBtnPopover"
+                  </br>
+                    <button id="hintBtnPopover" href="#" role="button" class="btn dot-hint-large btn-success btn-lg float-end" data-toggle="hintBtnPopover"
                             data-bs-content="Each dot will display a different hint.">!
                     </button>
                     </br>
-                </div>
-                <div class="col-sm"></div>
               </div>
+              </br>
               <div class="modal-footer">
                 <button id="modalCloseBtn" type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
             </div>
@@ -197,7 +182,7 @@
     <div class="modal" id="wrongChoiceModal" tabindex="-1" role="dialog">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-          <div class="modal-header">
+          <div id="wrongmodal" class="modal-header">
             <h5 class="modal-title">Hmm...</h5>
           </div>
           <div class="modal-body">
@@ -215,12 +200,12 @@
     <div class="modal" id="correctChoiceModal" tabindex="-1" role="dialog">
       <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
-          <div class="modal-header" id="correctChoiceModalHeader">
-            <h5 class="modal-title">Congratulations!</h5>
-          </div>
           <div class="modal-body" id="correctChoiceModal">
-            <p>You have identified the email that is most likely to be legitimate.</p> </br>
-            <p>Round 2 is unlocked. Click next to move on!</p>
+              </br>
+              <h5>Congratulations! &#128077</h5>
+              </br>
+                <p>You unlocked the next round!</p> </br>
+                <p>Keep up the good work.</p>
           </div>
           <div class="modal-footer">
             <div class="d-grid gap-2 mx-auto">
@@ -239,11 +224,13 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <script type="text/javascript">
+
 // Show hint modal after period of time
         $(document).ready(function () {
                 setTimeout(function () {
                     $("#secondModal").modal('show');
-                    $('[data-toggle="hintBtnPopover"]').popover('toggle');
+                    //$('[data-toggle="hintBtnPopover"]').popover('show');
+                    $('#hintBtnPopover').popover('show');
             }, 1000)
         });
 
@@ -252,15 +239,6 @@
           $('[data-toggle="popover"]').popover();
 
         });
-
-
-// INDIVIDUAL HINT FUNCTIONALITY
-//        $(document).ready(function(){
- //           $('#hint1-dot').click(function(){
-  //              $('[data-toggle="popover1"]').popover('toggle');
-   //             document.getElementById('hint1').id = 'highlight-hint';
-    //        });
-     //   });
 
 // hint 1 button
         $(document).ready(function(){
@@ -289,6 +267,7 @@
 
             });
         });
+
 
 // hint 2 button
         $(document).ready(function(){
